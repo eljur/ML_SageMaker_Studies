@@ -171,7 +171,8 @@ if __name__ == '__main__':
 
     ## TODO: Define an optimizer and loss function for training
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
-    criterion = nn.BCELoss()
+    import torch.nn
+    criterion = torch.nn.BCELoss()
 
     
     # Trains the model (given line of code, which calls the above training function)
